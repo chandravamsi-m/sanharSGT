@@ -110,29 +110,29 @@ const Hero = () => {
       {/* Mockup Showcase with 3D Interaction */}
       <motion.div
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-        className="relative mt-0 md:mt-8 lg:mt-16 w-full flex flex-col gap-4 md:gap-6 z-20 scale-75 sm:scale-90 md:scale-100"
+        className="relative mt-8 md:mt-12 lg:mt-20 w-[140vw] flex flex-col gap-4 md:gap-6 z-20 scale-90 sm:scale-95 md:scale-100 left-1/2 -translate-x-1/2"
       >
         {/* Row 1 - Left to Right */}
-        <div className="flex gap-4 md:gap-6 overflow-hidden">
+        <div className="flex gap-4 md:gap-6 overflow-hidden w-full">
           <motion.div
-            animate={{ x: [0, -1000] }}
-            transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-            className="flex gap-4 md:gap-6 shrink-0 items-center"
+            animate={{ x: ["0%", "-25%"] }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+            className="flex gap-4 md:gap-6 shrink-0 items-center w-max"
           >
-            {[...heroContent.row1, ...heroContent.row1].map((item, i) => (
+            {[...heroContent.row1, ...heroContent.row1, ...heroContent.row1, ...heroContent.row1, ...heroContent.row1, ...heroContent.row1, ...heroContent.row1, ...heroContent.row1, ...heroContent.row1, ...heroContent.row1, ...heroContent.row1, ...heroContent.row1].map((item, i) => (
               <MockupCard key={i} item={item} />
             ))}
           </motion.div>
         </div>
 
         {/* Row 2 - Right to Left */}
-        <div className="flex gap-4 md:gap-6 overflow-hidden">
+        <div className="flex gap-4 md:gap-6 overflow-hidden w-full">
           <motion.div
-            animate={{ x: [-1000, 0] }}
-            transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-            className="flex gap-4 md:gap-6 shrink-0 items-center"
+            animate={{ x: ["-25%", "0%"] }}
+            transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+            className="flex gap-4 md:gap-6 shrink-0 items-center w-max"
           >
-            {[...heroContent.row2, ...heroContent.row2].map((item, i) => (
+            {[...heroContent.row2, ...heroContent.row2, ...heroContent.row2, ...heroContent.row2, ...heroContent.row2, ...heroContent.row2, ...heroContent.row2, ...heroContent.row2, ...heroContent.row2, ...heroContent.row2, ...heroContent.row2, ...heroContent.row2].map((item, i) => (
               <MockupCard key={i} item={item} />
             ))}
           </motion.div>
