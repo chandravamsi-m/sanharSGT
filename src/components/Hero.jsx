@@ -37,6 +37,7 @@ const Hero = () => {
 
   return (
     <section
+      id="hero"
       ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}

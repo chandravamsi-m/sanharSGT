@@ -31,7 +31,7 @@ const About = () => {
     }, [])
 
     return (
-        <section ref={sectionRef} className="py-32 px-6 bg-surface overflow-hidden">
+        <section id="about" ref={sectionRef} className="py-32 px-6 bg-surface overflow-hidden">
             <div className="max-w-[1440px] mx-auto">
                 <div className="flex flex-col lg:flex-row gap-24 items-start">
                     <div className="lg:w-1/2 about-left">
@@ -82,7 +82,7 @@ const About = () => {
                         </p>
                     </div>
                     <div className="p-16 rounded-card bg-primary text-white relative overflow-hidden group">
-                         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-bl-[200px] transition-all group-hover:scale-110" />
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-bl-[200px] transition-all group-hover:scale-110" />
                         <h3 className="uppercase tracking-widest text-xs font-black text-white/50 mb-6">Our Mission</h3>
                         <p className="text-2xl md:text-3xl font-bold leading-relaxed relative z-10">
                             To deliver systems that evolve with the organization, ensuring scalability, security and superior performance.

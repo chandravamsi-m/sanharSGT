@@ -37,12 +37,12 @@ const Careers = () => {
   ]
 
   return (
-    <section ref={container} className="py-32 px-6 bg-surface overflow-hidden">
+    <section id="careers" ref={container} className="py-32 px-6 bg-surface overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-20 career-title">
-          <h2 className="text-[44px] md:text-[64px] font-extrabold mb-6 leading-tight text-heading">Build Systems<br/><span className="text-primary">That Matter</span></h2>
+          <h2 className="text-[44px] md:text-[64px] font-extrabold mb-6 leading-tight text-heading">Build Systems<br /><span className="text-primary">That Matter</span></h2>
           <p className="text-xl text-body max-w-2xl mx-auto font-medium">
-            Join our team designing digital infrastructure for healthcare and 
+            Join our team designing digital infrastructure for healthcare and
             enterprise growth.
           </p>
         </div>
@@ -55,18 +55,18 @@ const Careers = () => {
             >
               <div>
                 <div className="flex justify-between items-start mb-8">
-                    <h3 className="text-3xl font-extrabold max-w-[70%] text-heading group-hover:text-primary transition-colors">{job.title}</h3>
-                    <span className="px-5 py-1.5 bg-surface rounded-full text-[10px] font-black uppercase tracking-widest text-muted border border-border shadow-sm">{job.dept}</span>
+                  <h3 className="text-3xl font-extrabold max-w-[70%] text-heading group-hover:text-primary transition-colors">{job.title}</h3>
+                  <span className="px-5 py-1.5 bg-surface rounded-full text-[10px] font-black uppercase tracking-widest text-muted border border-border shadow-sm">{job.dept}</span>
                 </div>
                 <div className="flex flex-wrap gap-8 items-center text-body font-bold text-xs uppercase tracking-widest mb-16">
-                   <div className="flex items-center gap-3">
-                       <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                       {job.loc}
-                   </div>
-                   <div className="flex items-center gap-3">
-                       <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                       {job.type}
-                   </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    {job.loc}
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    {job.type}
+                  </div>
                 </div>
               </div>
               <button className="btn-primary w-fit px-10">

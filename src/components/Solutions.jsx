@@ -17,13 +17,13 @@ const Solutions = () => {
   }, [])
 
   return (
-    <section className="pt-4 md:pt-4 pb-16 md:pb-20 bg-surface relative overflow-hidden flex flex-col items-center">
+    <section id="solutions" className="pt-4 md:pt-12 pb-4 md:pb-4 bg-surface relative overflow-hidden flex flex-col items-center">
       <div className="container-custom relative z-10 text-center mb-6 px-4">
         <motion.h2
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-extrabold text-heading mb-4 max-w-2xl mx-auto leading-tight"
+          className="text-[30px] sm:text-[42px] md:text-[52px] leading-[1.15] font-extrabold text-heading mb-5 tracking-[-0.03em] max-w-4xl mx-auto"
         >
           {solutionsContent.heading}
         </motion.h2>
@@ -32,7 +32,7 @@ const Solutions = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-base md:text-lg text-body max-w-2xl mx-auto px-4"
+          className="text-sm md:text-base leading-relaxed text-body max-w-2xl mx-auto px-4"
         >
           {solutionsContent.subheading}
         </motion.p>
@@ -48,7 +48,7 @@ const Solutions = () => {
         />
       </div>
 
-      <div className="w-full mt-0 md:mt-4 relative">
+      <div className="w-full mt-0 md:mt-0 relative">
         {/* Side Shades using Mask Image for a more premium look */}
         <div
           className="absolute inset-0 z-10 pointer-events-none"
