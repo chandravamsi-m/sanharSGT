@@ -44,6 +44,7 @@ const Solutions = () => {
           bend={isMobile ? 0 : 3}
           textColor="#3F3F46"
           borderRadius={0.05}
+          scrollSpeed={1}
           onScroll={(val) => setScrollX(val)}
         />
       </div>
@@ -61,7 +62,7 @@ const Solutions = () => {
         <div className="overflow-hidden py-6 md:py-10">
           <motion.div
             style={{
-              x: ((-scrollX * 30) % 600) - 300 // Adjusted for mobile speed and wrapping
+              x: ((-scrollX * 15) % 600) - 300 // Adjusted for mobile speed and wrapping
             }}
             className="flex justify-center items-center gap-10 md:gap-24 opacity-30 grayscale hover:grayscale-0 transition-all duration-500 whitespace-nowrap"
           >
