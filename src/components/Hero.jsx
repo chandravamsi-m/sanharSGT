@@ -4,7 +4,7 @@ import { heroContent } from '../data/heroContent'
 
 const Hero = () => {
   const heroRef = useRef(null)
-  
+
   // 3D Perspective Mouse Tracking
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
@@ -36,27 +36,27 @@ const Hero = () => {
   }
 
   return (
-    <section 
-      ref={heroRef} 
+    <section
+      ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative min-h-[90vh] md:min-h-screen pt-32 md:pt-48 pb-40 md:pb-60 overflow-hidden bg-surface flex flex-col items-center"
+      className="relative min-h-[90vh] md:min-h-screen pt-32 md:pt-36 pb-4 md:pb-8 overflow-hidden bg-surface flex flex-col items-center justify-start"
       style={{ perspective: "1500px" }}
     >
       {/* Background Grid Pattern - Fading out from the center */}
-      <div className="absolute inset-0 z-0 pointer-events-none" 
-           style={{ 
-             backgroundImage: `radial-gradient(var(--color-primary) 1.5px, transparent 1.5px)`, 
-             backgroundSize: '40px 40px',
-             maskImage: 'linear-gradient(to bottom, black 30%, transparent 70%)',
-             WebkitMaskImage: 'linear-gradient(to bottom, black 30%, transparent 70%)',
-             opacity: 0.2
-           }} 
+      <div className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(var(--color-primary) 1.5px, transparent 1.5px)`,
+          backgroundSize: '40px 40px',
+          maskImage: 'linear-gradient(to bottom, black 30%, transparent 70%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, black 30%, transparent 70%)',
+          opacity: 0.2
+        }}
       />
 
       <div className="container-custom relative z-10 flex flex-col items-center text-center px-4">
         {/* Main Heading */}
-        <motion.h1 
+        <motion.h1
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -66,21 +66,21 @@ const Hero = () => {
         </motion.h1>
 
         {/* Description */}
-        <motion.p 
+        <motion.p
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-          className="text-base md:text-lg leading-relaxed text-body max-w-xl mx-auto mb-10 px-4"
+          className="text-base md:text-lg leading-relaxed text-body max-w-xl mx-auto mb-6 md:mb-8 px-4"
         >
           {heroContent.description}
         </motion.p>
 
         {/* Buttons */}
-        <motion.div 
+        <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-16 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-10 md:mb-12 w-full sm:w-auto"
         >
           <button className="btn-primary w-full sm:w-auto py-4 px-8 text-sm">
             Book An Appointment
@@ -91,29 +91,29 @@ const Hero = () => {
         </motion.div>
 
         {/* Stats Row - Responsive Wrap */}
-        <motion.div 
+        <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-          className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12 py-8 border-y border-border max-w-3xl mx-auto w-full"
+          className="grid grid-cols-3 gap-4 md:gap-12 py-8 border-y border-border max-w-3xl mx-auto w-full"
         >
           {heroContent.stats.map((stat, i) => (
             <div key={i} className="flex flex-col items-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary leading-none mb-1">{stat.value}</div>
-              <div className="text-[12px] md:text-[13px] font-medium text-body text-center">{stat.label}</div>
+              <div className="text-xl md:text-3xl font-bold text-primary leading-none mb-1">{stat.value}</div>
+              <div className="text-[10px] md:text-[13px] font-medium text-body text-center">{stat.label}</div>
             </div>
           ))}
         </motion.div>
       </div>
 
       {/* Mockup Showcase with 3D Interaction */}
-      <motion.div 
+      <motion.div
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-        className="relative mt-12 md:mt-20 w-full flex flex-col gap-4 md:gap-6 z-20 scale-75 sm:scale-90 md:scale-100"
+        className="relative mt-0 md:mt-8 lg:mt-16 w-full flex flex-col gap-4 md:gap-6 z-20 scale-75 sm:scale-90 md:scale-100"
       >
         {/* Row 1 - Left to Right */}
         <div className="flex gap-4 md:gap-6 overflow-hidden">
-          <motion.div 
+          <motion.div
             animate={{ x: [0, -1000] }}
             transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
             className="flex gap-4 md:gap-6 shrink-0 items-center"
@@ -126,7 +126,7 @@ const Hero = () => {
 
         {/* Row 2 - Right to Left */}
         <div className="flex gap-4 md:gap-6 overflow-hidden">
-          <motion.div 
+          <motion.div
             animate={{ x: [-1000, 0] }}
             transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
             className="flex gap-4 md:gap-6 shrink-0 items-center"
