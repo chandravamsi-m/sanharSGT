@@ -35,9 +35,9 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Glassmorphic Contact Container */}
-        <div className="bg-surface/40 backdrop-blur-xl border border-border px-6 py-2.5 rounded-full flex items-center justify-center shrink-0 w-[164px] h-[58px] shadow-sm">
-          <button className="w-full h-10 bg-primary text-white rounded-full text-sm font-bold hover:bg-primary-hover transition-all transform active:scale-95 shadow-md shadow-primary/20">
+        {/* Contact Button Container */}
+        <div className="shrink-0 w-[164px] h-[58px]">
+          <button className="w-full h-full bg-primary text-white border border-[#09090b]/20 rounded-full text-base font-bold hover:bg-primary-hover hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer shadow-lg shadow-primary/20">
             Contact Us
           </button>
         </div>

@@ -34,7 +34,7 @@ const About = () => {
     }, [])
 
     return (
-        <section id="about" ref={sectionRef} className="py-24 px-6 bg-surface overflow-hidden">
+        <section id="about" ref={sectionRef} className="pt-8 pb-24 px-6 bg-surface overflow-hidden">
             <div className="max-w-[1440px] mx-auto">
                 <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
                     <div className="lg:w-1/2 about-left">

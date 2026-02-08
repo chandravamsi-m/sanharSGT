@@ -1,12 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { productsContent } from '../data/productsContent'
 
 const Platforms = () => {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   return (
-    <section id="products" className="pt-12 pb-4 md:pb-8 bg-surface">
+    <section id="products" className="pt-8 pb-4 md:pb-8 bg-surface">
       <div className="container-custom">
         {/* Header section matching Figma 84:5949 */}
         <div className="text-center mb-8 md:mb-16 max-w-4xl mx-auto px-4">
@@ -70,10 +78,16 @@ const Platforms = () => {
                   {isActive && (
                     <motion.div
                       key="content"
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      transition={{ duration: 0.4 }}
+                      initial={{ opacity: 0, x: isMobile ? 0 : 20, y: isMobile ? 15 : 0 }}
+                      animate={{ opacity: 1, x: 0, y: 0 }}
+                      exit={{ opacity: 0, x: isMobile ? 0 : -20, y: isMobile ? -15 : 0 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 30,
+                        mass: 0.8,
+                        opacity: { duration: 0.2 }
+                      }}
                       className="flex-1 p-5 md:p-8 flex flex-col items-start h-full overflow-hidden"
                     >
                       <div className="w-full">
