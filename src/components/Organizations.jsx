@@ -152,7 +152,7 @@ const Organizations = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-[28px] sm:text-[36px] md:text-[42px] leading-[1.15] font-extrabold text-heading mb-4 tracking-[-0.03em]"
+            className="text-[30px] sm:text-[42px] md:text-[52px] leading-[1.15] font-extrabold text-heading mb-5 tracking-[-0.03em]"
           >
             Serving Complex Organizations
           </motion.h2>
@@ -161,7 +161,7 @@ const Organizations = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-xs md:text-sm leading-relaxed text-body max-w-2xl mx-auto font-medium"
+            className="text-sm md:text-base leading-relaxed text-body max-w-2xl mx-auto font-medium"
           >
             Specialized digital solutions tailored to the unique workflows and enterprise scale of healthcare providers.
           </motion.p>
