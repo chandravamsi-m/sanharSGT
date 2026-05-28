@@ -105,8 +105,8 @@ const Organizations = () => {
     const isImageLeft = layout === 'image-left'
 
     return (
-      <div key={item.id} className={`bg-white border border-border rounded-[20px] flex flex-col md:grid md:grid-cols-2 gap-0 overflow-hidden hover:shadow-xl hover:border-primary/20 transition-all duration-300 group h-full min-h-[400px] md:min-h-0`}>
-        <div className={`h-1/2 md:h-full flex flex-col items-start gap-3 p-6 md:p-8 ${isImageLeft ? "md:order-2" : "md:order-1"}`}>
+      <div key={item.id} className={`bg-white border border-border rounded-[20px] flex flex-col-reverse md:grid md:grid-cols-2 gap-0 overflow-hidden hover:shadow-xl hover:border-primary/20 transition-all duration-300 group h-full min-h-[400px] md:min-h-0`}>
+        <div className={`basis-1/2 flex-shrink-0 md:h-full flex flex-col items-start gap-2 pt-2 pb-6 px-6 md:py-8 ${isImageLeft ? "md:pl-2 md:pr-8 md:order-2" : "md:pr-2 md:pl-8 md:order-1"}`}>
           <div className="flex-1">
             <span className="text-[10px] font-black tracking-widest text-muted uppercase mb-2 block">{item.tagline}</span>
             <h3 className="text-xl font-bold text-heading mb-2 group-hover:text-primary transition-colors leading-tight">{item.title}</h3>
@@ -114,7 +114,7 @@ const Organizations = () => {
           </div>
           {renderButton()}
         </div>
-        <div className={`h-1/2 md:h-full ${isImageLeft ? "md:order-1" : "md:order-2"}`}>
+        <div className={`basis-1/2 flex-shrink-0 md:h-full ${isImageLeft ? "md:order-1" : "md:order-2"}`}>
           {renderImagePlaceholder()}
         </div>
       </div>
@@ -126,8 +126,8 @@ const Organizations = () => {
     const isImageTop = layout === 'image-top'
 
     return (
-      <div key={item.id} className={`bg-white border border-border rounded-[20px] flex flex-col ${isImageTop ? "flex-col-reverse" : "flex-col"} overflow-hidden h-full hover:shadow-xl hover:border-primary/20 transition-all duration-300 group min-h-[500px] md:min-h-0`}>
-        <div className="h-1/2 flex flex-col items-start gap-4 p-6 md:p-8">
+      <div key={item.id} className={`bg-white border border-border rounded-[20px] flex flex-col-reverse ${isImageTop ? "md:flex-col-reverse" : "md:flex-col"} overflow-hidden h-full hover:shadow-xl hover:border-primary/20 transition-all duration-300 group min-h-[500px] md:min-h-0`}>
+        <div className={`basis-1/2 flex-shrink-0 flex flex-col items-start gap-3 pt-2 pb-6 px-6 md:px-8 ${isImageTop ? "md:pt-2 md:pb-8" : "md:pb-2 md:pt-8"}`}>
           <div className="flex-1">
             <span className="text-[10px] font-black tracking-widest text-muted uppercase mb-2 block">{item.tagline}</span>
             <h3 className="text-2xl md:text-3xl font-bold text-heading mb-3 group-hover:text-primary transition-colors leading-tight">{item.title}</h3>
@@ -135,7 +135,7 @@ const Organizations = () => {
           </div>
           {renderButton()}
         </div>
-        <div className="h-1/2 w-full">
+        <div className="basis-1/2 flex-shrink-0 w-full">
           {renderImagePlaceholder()}
         </div>
       </div>
@@ -144,7 +144,7 @@ const Organizations = () => {
 
   return (
     <section id="industries" ref={scrollRef} className="pt-12 pb-12 px-8 md:px-16 bg-surface overflow-hidden">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1200px] lg:max-w-[1100px] mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
           <motion.h2
